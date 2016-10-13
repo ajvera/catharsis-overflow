@@ -2,13 +2,37 @@
   margin: 20px auto;
   width: 600px;
   padding: 0px 20px 20px 20px;
-  /*border: 1px dotted black;*/
+  border: 1px dotted black;
 }
 th {
   text-align: left;
 }
+
 .login {
 	max-width: 500px;
 	margin:auto;
 	padding: 20px;
 }
+
+ div.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+  div.nav li {
+    float: right;
+}
+
+  div.nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+  div.nav li a:hover {
+    background-color: #111;
+  }
