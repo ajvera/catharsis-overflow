@@ -1,0 +1,10 @@
+<h1>Welcome to your user profile! ☚(ﾟヮﾟ☚)</h1>
+
+<div class="questions">
+<h2>Questions: </h2>
+<dl>
+<% current_user.questions.each do |question| %>
+	<dt><b><% question.title %>:</b></dt>
+	<dd><% question.body %></dd>
+<% end %>
+</dl>
