@@ -8,6 +8,11 @@ th {
   text-align: left;
 }
 
+.login {
+	max-width: 500px;
+	margin:auto;
+	padding: 20px;
+}
 
  div.nav ul {
     list-style-type: none;
@@ -31,5 +36,3 @@ th {
   div.nav li a:hover {
     background-color: #111;
   }
-
-
