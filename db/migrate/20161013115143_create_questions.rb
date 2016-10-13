@@ -5,5 +5,6 @@ class CreateQuestions < ActiveRecord::Migration
       t.integer :asker_id
 
       t.timestamps(null:false)
+    end
   end
 end
