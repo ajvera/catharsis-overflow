@@ -22,11 +22,11 @@
   <ul>
     <li><a href="">Home</a></li>
   <% if logged_in? %>
-    <li><a href=""><%= current_user.username %></a></li>
-    <li><a href="">Logout</a></li>
+    <li><a href="/users/<%= current_user.id %>"><%= current_user.username %></a></li>
+    <li><a href="/sessions">Logout</a></li>
   <% else %>
-    <li><a href="">Login</a></li>
-    <li><a href="">Register</a></li>
+    <li><a href="/sessions">Login</a></li>
+    <li><a href="/users/new">Register</a></li>
   <%end%>
 
   </ul>
