@@ -7,3 +7,8 @@
 th {
   text-align: left;
 }
+.login {
+	max-width: 500px;
+	margin:auto;
+	padding: 20px;
+}
