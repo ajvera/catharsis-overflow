@@ -10,6 +10,10 @@ module CatharsisHelpers
     session[:user_id] != nil
   end
 
+  def fully_authorized?
+    session[:user_id] == current_user.id
+ 	end
+
 end
 
 helpers CatharsisHelpers
