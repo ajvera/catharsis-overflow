@@ -5,3 +5,5 @@
 20.times{Answer.create(body: Faker::Hipster.paragraph, responder_id: rand(20), question_id: rand(20))}
 
 20.times{Comment.create(body: Faker::Hipster.sentence, user_id: rand(20))}
+
+20.times{Comment.create(voter_id: rand(20))}
