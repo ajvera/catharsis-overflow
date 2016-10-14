@@ -1,11 +1,60 @@
 .container {
   margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  width: 680px;
+  padding: 0px 20px 20px -20px;
+  border: solid 1px #847c7c;
+  position: relative;
+  diplay: block;
 }
 th {
   text-align: left;
+}
+
+.coffee {
+  margin-top: -40px;
+}
+
+div.container img {
+  margin: -10px 100 30px -10px;
+  z-index: -1;
+  display: inline;
+  float: left;
+  padding: 10px;
+}
+
+h1 {
+  font-size: 350%;
+  font-family: "Miltonian Tattoo";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 26.4px;
+  display: inline;
+  float: right;
+  margin-left:-50px;
+}
+
+h2 {
+ font-family: "Miltonian Tattoo";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 26.4px;
+  text-align: right;
+  float: right;
+  margin-bottom: 30px;
+  margin-top: -50px;
+}
+
+div.nav li:first-child {
+  font-family: "Dawning of a New Day";
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  padding: 10px;
+  margin-left: 10px;
+  float: left;
+  /*margin: 5px 0 -20px 15px;*/
 }
 
 .login {
@@ -36,3 +85,13 @@ th {
   div.nav li a:hover {
     background-color: #111;
   }
+
+.questions {
+  display: block;
+  position: absolute;
+  width: 680px;
+  margin-left: 30%;
+  margin-right: 50%;
+  margin-top: 10%;
+
+}

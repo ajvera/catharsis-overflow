@@ -1,9 +1,16 @@
-<div class="container">
-<h1></h1>
-<ul>
-  <% @questions.each do |question| %>
-    <li><a href="/questions/<%= question.id %>"><%= question.title %></a></li>
-  <% end %>
-</ul>
 
+<div class="container">
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Miltonian+Tattoo" />
+
+
+  <h1><IMG class="coffee" SRC="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1xGOn9CPGK2A-7sMvPUhq019dcTEhAdLLqRRo_wVQViE8NZe4jQ"  WIDTH=100 HEIGHT=80>Catharsis Overflow:</h1>
+<h2>Pour Your Heart Out*</h2>
+
+</div>
+<div class="questions">
+  <ul>
+    <% @questions.each do |question| %>
+      <li><a href="/questions/<%= question.id %>"><%= question.title %></a></li>
+    <% end %>
+  </ul>
 </div>
