@@ -9,8 +9,7 @@ post '/questions/:q_id/comments' do
 	end
 end
 
-post '/questions/:q_id/answers/:a_id/comments' do
-	p params	
+post '/questions/:q_id/answers/:a_id/comments' do	
 	if logged_in?
 		@comment = Comment.new(user_id: current_user.id, commentable_id: params[:a_id],commentable_type: "Answer", body: params[:comment] )
 		if @comment.save
