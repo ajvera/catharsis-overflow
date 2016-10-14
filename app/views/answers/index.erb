@@ -1,0 +1,7 @@
+<div class="answers">
+  <ul>
+    <% @answers.each do |answer| %>
+      <li><%= answer.responder_id.username %>"><%= answer.body%></li>
+    <% end %>
+  </ul>
+</div>
