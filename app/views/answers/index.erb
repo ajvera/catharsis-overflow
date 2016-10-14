@@ -2,6 +2,13 @@
   <ul>
     <% if @answers.length != 0 %>
       <% @answers.each do |answer| %>
+        <form method="POST", action="/questions/<%= @question.id %>/answers/<%= answer.id %>/vote" class="vote">
+          <button class="vote" type="submit" name="vote" value="1">Vote!</button>
+        </form>
+        <p><%= answer.votes.pluck(:vote_value).sum %></p>
+        <form method="POST", action="/questions/<%= @question.id %>/answers/<%= answer.id %>/vote" class="vote">
+          <button class="vote" type="submit" name="vote" value="-1">Downvote!</button>
+        </form><br>
         <li>
           <i>User: </i>
           <b><%= answer.responder.username %></b><br><br><%= answer.body%>
@@ -10,6 +17,7 @@
           <li><%= comment.body %></li>
           <% end %>
         </ul></li><br><br>
+        <% if logged_in? %>
         <div>
           <form action="/questions/<%= @question.id %>/answers/<%= answer.id %>/comments" method="post">
             <label for="comment">Comment:</label>
@@ -17,7 +25,7 @@
             <button>Comment</button>
           </form>
         </div>
-
+        <% end %>
          <br><br>
         <br>
         <hr>
