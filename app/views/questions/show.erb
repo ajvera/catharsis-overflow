@@ -1,12 +1,10 @@
 <div class='questions'>
   <form method="POST", action="/questions/<%= @question.id %>/vote" class="vote">
-    <button type="submit">Vote!</button>
+    <button type="submit" value="upvote">Vote!</button>
   </form>
-  <br>
   <p><%= @question.votes.pluck(:vote_value).sum %></p>
-  <br>
   <form method="POST", action="/questions/<%= @question.id %>/vote" class="downvote">
-    <button type="submit">Downvote!</button>
+    <button type="submit" value="downvote">Downvote!</button>
   </form>
 
   <h3>Question: <%= @question.title %></h3>
