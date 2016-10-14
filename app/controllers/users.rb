@@ -15,8 +15,9 @@ post '/users' do
 end
 
 get '/users/:user_id' do
+  @user = User.find(params[:user_id])
 	if logged_in? && fully_authorized?
-		erb :'/users/show'	
+		erb :'/users/show'
 	else
 		@error = "No soup for you! Must login to view your profile page."
 		redirect '/'
