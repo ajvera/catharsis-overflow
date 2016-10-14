@@ -1,7 +1,7 @@
 <div class="questions">
 
 
-  <ul>
+  <ul class="questions">
     <% @questions.each do |question| %>
       <li><a href="/questions/<%= question.id %>"><%= question.title %></a></li>
     <% end %>
