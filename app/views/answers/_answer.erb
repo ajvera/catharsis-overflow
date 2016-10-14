@@ -1,0 +1,30 @@
+<ul>
+  <li>
+    <i>User: </i><b><%= answer.responder.username %></b>
+    <br>
+    <br>
+    <%= answer.body%>
+    <% answer.comments.each do |comment| %>
+        <li><%= comment.body %></li>
+    <% end %>
+</ul>
+  </li>
+
+<br>
+<br>
+  <div>
+    <form action="/questions/<%= @question.id %>/answers/<%= @answer.id %>/comments" class="postanswer" method="post">
+      <label for="comment">
+        Comment:
+      </label>
+      <input type="textfield" name="comment">
+      <br>
+      <button>
+        Comment
+      </button>
+    </form>
+  </div>
+<br>
+<br>
+<br>
+
