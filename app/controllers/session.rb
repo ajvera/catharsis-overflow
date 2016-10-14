@@ -14,6 +14,10 @@ end
 
 
 delete '/sessions' do
-	session.delete(:user_id)
-	redirect '/'
+	if request.xhr?
+		session[:user_id] = nil
+	else
+		session.delete(:user_id)
+		redirect '/'
+	end
 end
