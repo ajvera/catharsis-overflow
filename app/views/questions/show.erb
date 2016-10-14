@@ -1,10 +1,19 @@
 <div class='questions'>
   <h3>Question: <%= @question.title %></h3>
-  <p>Asked by: <%= @question.asker %></p>
+  <p>Asked by: <%= @question.asker.username %></p>
   <p><%= @question.body %></p>
   <br>
   <br>
   <b>Answers</b>
   <% erb(:"answers/index") %>
+  <hr>
+  <h3>Your Answer:</h3>
+  <form action="questions/:id" method="post">
+  Answer:<input type="text" value="Answer">
+  <br>
+  <br>
+  <input type="submit" value="Submit">
+  </form>
+</div>
 
 </div>
