@@ -39,9 +39,8 @@
 </div>
   <br>
   <br>
-
-  <form action="/questions/<%=@question.id%>/answers" method="post">
-  Answer:<input type="text" placeholder="Answer" name="body">
+  <form class="postanswer" action="/questions/<%=@question.id%>/answers" method="post">
+  Answer:<input type="text" placeholder="Answer"  name="body">
   <br>
   <br>
 
@@ -50,4 +49,4 @@
 
 </div>
 <% end %>
-  
+

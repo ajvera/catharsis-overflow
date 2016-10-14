@@ -9,7 +9,9 @@
         <form method="POST", action="/questions/<%= @question.id %>/answers/<%= answer.id %>/vote" class="vote">
           <button class="vote" type="submit" name="vote" value="-1">Downvote!</button>
         </form><br>
-        <li><%= answer.responder.username %><br><br><%= answer.body%>
+        <li>
+          <i>User: </i>
+          <b><%= answer.responder.username %></b><br><br><%= answer.body%>
         <ul>
         <% answer.comments.each do |comment| %>
           <li><%= comment.body %></li>
@@ -24,9 +26,9 @@
           </form>
         </div>
         <% end %>
-
          <br><br>
         <br>
+        <hr>
       <% end %>
     <% else %>
       <i>No answers yet. Why don't you help them out?</i>
