@@ -3,12 +3,6 @@ get '/questions' do
   erb :'/questions/index'
 end
 
-get '/questions/:id' do
-  @question = Question.find_by(id: params[:id])
-  @answers = @question.answers
-  erb :'/questions/show'
-end
-
 post '/questions' do
   @question = Question.new(asker_id: current_user.id, title: params[:title], body: params[:body])
   if @question.save
@@ -19,4 +13,13 @@ post '/questions' do
   end
 end
 
+post 'questions/:id/vote' do
+
+end
+
+get '/questions/:id' do
+  @question = Question.find_by(id: params[:id])
+  @answers = @question.answers
+  erb :'/questions/show'
+end
 
