@@ -10,5 +10,9 @@ post '/sessions' do
 	else
 		erb :'sessions/login'
 	end
-	
+
+
+delete '/sessions' do
+	session.delete(:user_id)
+	redirect '/'
 end
