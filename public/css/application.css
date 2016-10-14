@@ -104,19 +104,37 @@ div.nav li:first-child {
 
 button {
   background-color: black;
-    color: white;
-    border: 2px solid #555555;
-    border-radius: 8px;
-    padding: 10px 24px;
+  color: white;
+  border: 2px solid #555555;
+  border-radius: 8px;
+  padding: 10px 24px;
 }
 
 button:hover {
-    background-color: white;
-    color: black;
+  background-color: white;
+  color: black;
 }
 
 div.errors {
   color: red;
 }
+
+.vote {
+  background-color: transparent;
+  border: none;
+  padding-top: 5px;
+  color: #8C8C8C;
+  vertical-align: sub;
+  padding: 1px 0px 0px 0px;
+}
+
+.vote:hover {
+  color: black;
+}
+
+.vote:focus {
+  color: #0dbc3e;
+}
+
 
 

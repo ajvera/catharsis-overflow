@@ -1,17 +1,54 @@
 <div class='questions'>
+  <form method="POST", action="/questions/<%= @question.id %>/vote" class="vote">
+    <button class="vote" type="submit" name="vote" value="1">Vote!</button>
+  </form>
+  <p><%= @question.votes.pluck(:vote_value).sum %></p>
+  <form method="POST", action="/questions/<%= @question.id %>/vote" class="vote">
+    <button class="vote" type="submit" name="vote" value="-1">Downvote!</button>
+  </form>
+
   <h3>Question: <%= @question.title %></h3>
+
   <p>Asked by: <%= @question.asker.username %></p>
+
   <p><%= @question.body %></p>
   <br>
   <br>
+
   <h3>Comments:</h3>
   <% @question.comments.each do |comment| %>
-  
+
   <%= comment.body %><br>
   <span><i>User: <b><%= comment.user.username %></b></i></span><br><br>
   <% end %>
   <% if logged_in? %>
   <%= erb(:"comments/new_question_comment") %> <br><br>
+
+  <b>Answers</b>
+  <%= erb(:"answers/index") %>
+  <hr>
+
+  <h3>Your Answer:</h3>
+
+  <div class="errors">
+    <% if @errors %>
+    <%@errors.each do |error| %>
+    <%=error%>
+    <% end %>
+  <% end %>
+</div>
+  <br>
+  <br>
+
+  <form action="/questions/<%=@question.id%>/answers" method="post">
+  Answer:<input type="text" placeholder="Answer" name="body">
+  <br>
+  <br>
+
+  <button type="submit" value="Provide catharsis">Provide catharsis</button>
+  </form>
+
+</div>
   <% end %>
   <b>Answers</b>
   <%= erb(:"answers/index") %>

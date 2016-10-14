@@ -11,3 +11,20 @@ $(document).ready(function() {
  	})
  });
 });
+
+// $(document).ready(function() {
+//   $('.questionform').on('submit', function(event) {
+//     // console.log(event);
+//     event.preventDefault();
+//     var newPost = $(this).serialize();
+//     console.log(newPost);
+//     var request = $.ajax({
+//       method: "POST",
+//       url: "/questions",
+//       data: newPost,
+//     })
+//     request.done(function(response) {
+//       console.log(response);
+//     })
+//   })
+// });
