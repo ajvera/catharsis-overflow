@@ -2,7 +2,9 @@
   <ul>
     <% if @answers.length != 0 %>
       <% @answers.each do |answer| %>
-        <li><%= answer.responder.username %><br><br><%= answer.body%>
+        <li>
+          <i>User: </i>
+          <b><%= answer.responder.username %></b><br><br><%= answer.body%>
         <ul>
         <% answer.comments.each do |comment| %>
           <li><%= comment.body %></li>
@@ -15,9 +17,10 @@
             <button>Comment</button>
           </form>
         </div>
-      
+
          <br><br>
         <br>
+        <hr>
       <% end %>
     <% else %>
       <i>No answers yet. Why don't you help them out?</i>

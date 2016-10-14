@@ -1,13 +1,22 @@
 <div class='questions'>
-  <h3>Question: <%= @question.title %></h3>
-  <p>Asked by: <%= @question.asker.username %></p>
-  <p><%= @question.body %></p>
+  <h3>
+    Question: <%= @question.title %>
+  </h3>
+  <p>
+    Asked by: <%= @question.asker.username %>
+  </p>
+  <p>
+    <%= @question.body %>
+  </p>
   <br>
   <br>
-  <h3>Comments:</h3>
-  <% @question.comments.each do |comment| %>
-  
-  <%= comment.body %><br>
+  <h3>
+    Comments:
+  </h3>
+    <% @question.comments.each do |comment| %>
+
+    <%= comment.body %>
+  <br>
   <span><i>User: <b><%= comment.user.username %></b></i></span><br><br>
   <% end %>
   <%= erb(:"comments/new_question_comment") %> <br><br>
@@ -24,8 +33,8 @@
 </div>
   <br>
   <br>
-  <form action="/questions/<%=@question.id%>/answers" method="post">
-  Answer:<input type="text" placeholder="Answer" name="body">
+  <form class="postanswer" action="/questions/<%=@question.id%>/answers" method="post">
+  Answer:<input type="text" placeholder="Answer"  name="body">
   <br>
   <br>
   <button type="submit" value="Provide catharsis">Provide catharsis</button>
