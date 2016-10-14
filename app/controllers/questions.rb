@@ -14,7 +14,8 @@ post '/questions' do
 end
 
 post 'questions/:id/vote' do
-
+  @question = Question.find_by(id: params[:id])
+  @vote = Vote.find_by()
 end
 
 get '/questions/:id' do
