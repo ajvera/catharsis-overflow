@@ -1,11 +1,15 @@
 <div class='questions'>
-  <form method="POST", action="/questions/<%= @question.id %>/vote" class="vote">
-    <button class="vote" type="submit" name="vote" value="1">Vote!</button>
-  </form>
-  <p><%= @question.votes.pluck(:vote_value).sum %></p>
-  <form method="POST", action="/questions/<%= @question.id %>/vote" class="vote">
-    <button class="vote" type="submit" name="vote" value="-1">Downvote!</button>
-  </form>
+  <div class='question-votes'>
+    <form method="POST", action="/questions/<%= @question.id %>/votes" class="vote">
+      <button id="upvote" type="submit" name="vote" value="1">Vote!</button>
+    </form>
+
+    <p><%= @question.votes.pluck(:vote_value).sum %></p>
+
+    <form method="POST", action="/questions/<%= @question.id %>/votes" class="vote">
+      <button id="downvote" type="submit" name="vote" value="-1">Downvote!</button>
+    </form>
+  </div>
 
   <h3>Question: <%= @question.title %></h3>
 
@@ -36,7 +40,8 @@
     <%= error %>
     <% end %>
   <% end %>
-</div>
+  </div>
+
   <br>
   <br>
 
@@ -50,4 +55,4 @@
 
 </div>
 <% end %>
-  
+
