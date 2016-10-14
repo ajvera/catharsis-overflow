@@ -15,7 +15,7 @@ end
 
 post '/questions/:id/vote' do
   @question = Question.find_by(id: params[:id])
-  @vote = Vote.create(votable_type: "Question", votable_id: @question.id, voter_id: current_user.id, vote_value: 1)
+  @vote = Vote.create(votable_type: "Question", votable_id: @question.id, voter_id: current_user.id, vote_value: params[:vote].to_i)
   redirect "/questions/#{@question.id}"
 end
 
