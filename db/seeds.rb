@@ -7,15 +7,14 @@ end
 20.times do Answer.create(body: Faker::Hipster.paragraph, responder_id: rand(1..30), question_id: rand(1..20))
 end
 
-10.times do Comment.create(body: Faker::Hipster.sentence, user_id: rand(1..30), commentable_type: "Question", commentable_id: 10.times{Question.find(rand(1..10))})
+10.times do Comment.create(body: Faker::Hipster.sentence, user_id: rand(1..30), commentable_type: "Question", commentable_id: Question.find(rand(1..10)).id)
 end
 
-10.times do Comment.create(body: Faker::Hipster.sentence, user_id: rand(1..30), commentable_type: "Answer", commentable_id: 10.times{Answer.find(rand(1..10))})
+10.times do Comment.create(body: Faker::Hipster.sentence, user_id: rand(1..30), commentable_type: "Answer", commentable_id: Answer.find(rand(11..20)).id)
 end
 
-40.times do Vote.create(votable_type: "Question", votable_id: 10.times{Question.find(rand(1..20))}, voter_id: (rand(1..30)))
+40.times do Vote.create(votable_type: "Question", votable_id: Question.find(rand(1..20)).id, voter_id: (rand(1..30)))
 end
 
-40.times do
-  Vote.create(votable_type: "Answer", votable_id: 10.times{Answer.find(rand(1..20))}, voter_id: (rand(1..30)))
+40.times do Vote.create(votable_type: "Answer", votable_id: Answer.find(rand(1..20)).id, voter_id: (rand(1..30)))
 end
