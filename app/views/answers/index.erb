@@ -1,9 +1,13 @@
 <div class="answers">
   <ul>
-    <% if @answers %>
-    <% @answers.each do |answer| %>
-      <li><%= answer.responder_id.username %>"><%= answer.body%></li>
-    <% end %>
+    <% if @answers.length != 0 %>
+      <% @answers.each do |answer| %>
+        <li><%= answer.responder.username %><br><br><%= answer.body%>
+        </li>
+        <br>
+      <% end %>
+    <% else %>
+      <li>No answers yet. Why don't you help them out?</li>
     <% end %>
   </ul>
 </div>

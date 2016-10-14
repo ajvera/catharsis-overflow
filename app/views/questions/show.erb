@@ -5,14 +5,14 @@
   <br>
   <br>
   <b>Answers</b>
-  <% erb(:"answers/index") %>
+  <%= erb(:"answers/index") %>
   <hr>
   <h3>Your Answer:</h3>
-  <form action="questions/:id" method="post">
-  Answer:<input type="text" value="Answer">
+  <form action="/questions/<%=@question.id%>/answers" method="post">
+  Answer:<input type="text" placeholder="Answer" name="body">
   <br>
   <br>
-  <input type="submit" value="Submit">
+  <input type="submit" placeholder="Submit">
   </form>
 </div>
 
