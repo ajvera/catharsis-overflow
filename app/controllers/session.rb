@@ -10,6 +10,7 @@ post '/sessions' do
 	else
 		erb :'sessions/login'
 	end
+end
 
 
 delete '/sessions' do
