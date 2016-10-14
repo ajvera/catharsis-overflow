@@ -17,6 +17,14 @@
   <br>
   <br>
 
+  <h3>Comments:</h3>
+  <% @question.comments.each do |comment| %>
+
+  <%= comment.body %><br>
+  <span><i>User: <b><%= comment.user.username %></b></i></span><br><br>
+  <% end %>
+  <%= erb(:"comments/new_question_comment") %> <br><br>
+
   <b>Answers</b>
   <%= erb(:"answers/index") %>
   <hr>
@@ -28,7 +36,7 @@
   <br>
   <br>
 
-  <input type="submit" placeholder="Submit">
+  <button type="submit" value="Provide catharsis">Provide catharsis</button>
   </form>
 
 </div>

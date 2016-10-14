@@ -3,11 +3,24 @@
     <% if @answers.length != 0 %>
       <% @answers.each do |answer| %>
         <li><%= answer.responder.username %><br><br><%= answer.body%>
-        </li>
+        <ul>
+        <% answer.comments.each do |comment| %>
+          <li><%= comment.body %></li>
+          <% end %>
+        </ul></li><br><br>
+        <div>
+          <form action="/questions/<%= @question.id %>/answers/<%= answer.id %>/comments" method="post">
+            <label for="comment">Comment:</label>
+            <input type="textfield" name="comment"><br>
+            <button>Comment</button>
+          </form>
+        </div>
+      
+         <br><br>
         <br>
       <% end %>
     <% else %>
-      <li>No answers yet. Why don't you help them out?</li>
+      <i>No answers yet. Why don't you help them out?</i>
     <% end %>
   </ul>
 </div>
