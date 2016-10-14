@@ -15,6 +15,7 @@
           <li><%= comment.body %></li>
           <% end %>
         </ul></li><br><br>
+        <% if logged_in? %>
         <div>
           <form action="/questions/<%= @question.id %>/answers/<%= answer.id %>/comments" method="post">
             <label for="comment">Comment:</label>
@@ -22,6 +23,7 @@
             <button>Comment</button>
           </form>
         </div>
+        <% end %>
 
          <br><br>
         <br>
