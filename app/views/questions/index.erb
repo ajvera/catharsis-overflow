@@ -4,10 +4,10 @@
       <li><a href="/questions/<%= question.id %>"><%= question.title %></a></li>
     <% end %>
   </ul>
-</div>
-
-<div class="questionform">
+<hr>
+  <div class="questionform">
   <% if logged_in? %>
+    <h3> Post a New Question </h3>
     <form action="/questions" method="POST">
       <label for="title">Title:</label>
       <input type="text" name="title" placeholder="Title"><br>
@@ -19,3 +19,6 @@
     </form>
   <% end %>
 </div>
+</div>
+
+
