@@ -128,11 +128,19 @@ div.errors {
   padding: 1px 0px 0px 0px;
 }
 
-.#upvote, #downvote:hover {
+#downvote:hover {
   color: black;
 }
 
-#upvote, #downvote:focus {
+#downvote:focus {
+  color: #0dbc3e;
+}
+
+#upvote:hover {
+  color: black;
+}
+
+#upvote:focus {
   color: #0dbc3e;
 }
 
