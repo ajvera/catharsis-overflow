@@ -21,6 +21,7 @@
   <%= comment.body %><br>
   <span><i>User: <b><%= comment.user.username %></b></i></span><br><br>
   <% end %>
+  <% if logged_in? %>
   <%= erb(:"comments/new_question_comment") %> <br><br>
 
   <b>Answers</b>
@@ -48,5 +49,27 @@
   </form>
 
 </div>
-
+  <% end %>
+  <b>Answers</b>
+  <%= erb(:"answers/index") %>
+  <br>
+  <% if logged_in? %>
+    <h3>Your Answer:</h3>
+    <div class="errors">
+      <% if @errors %>
+        <%@errors.each do |error| %>
+        <%=error%>
+        <% end %>
+      <% end %>
+    </div>
+    <br>
+    <br>
+    <form action="/questions/<%=@question.id%>/answers" method="post">
+    Answer:<input type="text" placeholder="Answer" name="body">
+    <br>
+    <br>
+    <button type="submit" value="Provide catharsis">Provide catharsis</button>
+    </form>
+  </div>
 </div>
+<% end %>
