@@ -3,7 +3,8 @@
     <% if @answers.length != 0 %>
       <% @answers.each do |answer| %>
         <li><%= answer.responder.username %><br><br><%= answer.body%>
-        </li>
+        </li><br>
+        <%= erb(:"comments/new_question_comment") %> <br><br>
         <br>
       <% end %>
     <% else %>

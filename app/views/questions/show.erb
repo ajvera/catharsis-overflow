@@ -4,6 +4,12 @@
   <p><%= @question.body %></p>
   <br>
   <br>
+  <b>Comments:</b>
+  <% @question.comments.each do |comment| %>
+  <span><i>User: <%= comment.user.username %></i></span>
+  <%= comment.body %> <br>
+  <% end %>
+  <%= erb(:"comments/new_question_comment") %> <br><br>
   <b>Answers</b>
   <%= erb(:"answers/index") %>
   <hr>

@@ -1,0 +1,8 @@
+<div>
+	<form action="/questions/<%= @question.id %>/answers/<%= answer.id %>/comments" method="post">
+		<input type="hidden" name="answer_id" value="<%=answer.id%>">
+		<label for="comment">Comment:</label>
+		<input type="textfield" name="comment"><br>
+		<input type="submit">
+	</form>
+</div>
