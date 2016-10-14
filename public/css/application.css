@@ -119,7 +119,7 @@ div.errors {
   color: red;
 }
 
-.vote {
+#upvote, #downvote {
   background-color: transparent;
   border: none;
   padding-top: 5px;
@@ -128,15 +128,23 @@ div.errors {
   padding: 1px 0px 0px 0px;
 }
 
-.vote:hover {
+#downvote:hover {
   color: black;
 }
 
-.vote:focus {
+#downvote:focus {
+  color: #0dbc3e;
+}
+
+#upvote:hover {
+  color: black;
+}
+
+#upvote:focus {
   color: #0dbc3e;
 }
 
 .questions li {
-  
+
 }
 
