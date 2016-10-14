@@ -1,24 +1,4 @@
 <div class='questions'>
-<<<<<<< HEAD
-  <h3>
-    Question: <%= @question.title %>
-  </h3>
-  <p>
-    Asked by: <%= @question.asker.username %>
-  </p>
-  <p>
-    <%= @question.body %>
-  </p>
-  <br>
-  <br>
-  <h3>
-    Comments:
-  </h3>
-    <% @question.comments.each do |comment| %>
-
-    <%= comment.body %>
-  <br>
-=======
   <form method="POST", action="/questions/<%= @question.id %>/vote" class="vote">
     <button class="vote" type="submit" name="vote" value="1">Vote!</button>
   </form>
@@ -39,7 +19,6 @@
   <% @question.comments.each do |comment| %>
 
   <%= comment.body %><br>
->>>>>>> origin
   <span><i>User: <b><%= comment.user.username %></b></i></span><br><br>
   <% end %>
   <% if logged_in? %>
@@ -60,14 +39,8 @@
 </div>
   <br>
   <br>
-<<<<<<< HEAD
   <form class="postanswer" action="/questions/<%=@question.id%>/answers" method="post">
   Answer:<input type="text" placeholder="Answer"  name="body">
-=======
-
-  <form action="/questions/<%=@question.id%>/answers" method="post">
-  Answer:<input type="text" placeholder="Answer" name="body">
->>>>>>> origin
   <br>
   <br>
 
@@ -76,4 +49,4 @@
 
 </div>
 <% end %>
-  
+
