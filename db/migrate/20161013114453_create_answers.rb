@@ -3,7 +3,7 @@ class CreateAnswers < ActiveRecord::Migration
   	create_table :answers do |t|
   		t.string		:body
   		t.integer		:responder_id
-  		t.integer :question_id
+  		t.integer   :question_id
   		t.boolean		:best_answer, {default: false}
 
   		t.timestamps(null: false)
