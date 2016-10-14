@@ -1,10 +1,11 @@
-<h1>Welcome to your user profile! ☚(ﾟヮﾟ☚)</h1>
-
 <div class="questions">
-<h2>Questions: </h2>
-<dl>
-<% current_user.questions.each do |question| %>
-	<dt><b><% question.title %>:</b></dt>
-	<dd><% question.body %></dd>
-<% end %>
-</dl>
+ <font size="6"><b>Profile for user: <%=@user.username%></b></font>
+ <ul>
+    <% @user.questions.each do |question| %>
+      <li><b><a href="/questions/<%= question.id %>"><%= question.title %></a></b><br>
+      <%=question.body %></li>
+      <br>
+    <% end %>
+  </ul>
+
+<!-- input logic to display edit profil if user.username = current_user.username -->

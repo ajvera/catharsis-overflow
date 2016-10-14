@@ -1,6 +1,6 @@
 post '/questions/:id/answers' do
   p params
-  @answer = Answer.create(body: params[:body], question_id: params[:id], responder_id: current_user.id)
+  @answer = Answer.new(body: params[:body], question_id: params[:id], responder_id: current_user.id)
 
   if @answer.save
     redirect "/questions/#{params[:id]}"
