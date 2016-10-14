@@ -1,8 +1,8 @@
 post '/questions/:q_id/comments' do
 	if logged_in?
-		@comment = Comment.new(user_id: current_user.id, commentable_id: params[:id],commentable_type: "Question", body: params[:comment] )
+		@comment = Comment.new(user_id: current_user.id, commentable_id: params[:q_id],commentable_type: "Question", body: params[:comment] )
 		if @comment.save
-			redirect "/questions/#{params[:id]}"
+			redirect "/questions/#{params[:q_id]}"
 		end
 	else
 		"You must be logged in to comment!"
