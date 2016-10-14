@@ -13,9 +13,10 @@ post '/questions' do
   end
 end
 
-post 'questions/:id/vote' do
+post '/questions/:id/vote' do
   @question = Question.find_by(id: params[:id])
-  @vote = Vote.find_by()
+  @vote = Vote.create(votable_type: "Question", votable_id: @question.id, voter_id: current_user.id, vote_value: 1)
+  redirect "/questions/#{@question.id}"
 end
 
 get '/questions/:id' do
