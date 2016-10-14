@@ -15,7 +15,7 @@ th {
 }
 
 div.container img {
-  margin: -10px 100 30px -10px;
+  /*margin: -10px 100 30px -10px;*/
   z-index: -1;
   display: inline;
   float: left;
@@ -32,6 +32,7 @@ h1 {
   display: inline;
   float: right;
   margin-left:-50px;
+  position: relative;
 }
 
 h2 {
@@ -44,6 +45,7 @@ h2 {
   float: right;
   margin-bottom: 30px;
   margin-top: -50px;
+
 }
 
 div.nav li:first-child {
@@ -54,7 +56,12 @@ div.nav li:first-child {
   padding: 10px;
   margin-left: 10px;
   float: left;
+  color: white;
   /*margin: 5px 0 -20px 15px;*/
+}
+
+.asterisk {
+  font-family: sans-serif;
 }
 
 .login {
@@ -95,3 +102,4 @@ div.nav li:first-child {
   margin-top: 10%;
 
 }
+
