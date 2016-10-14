@@ -13,8 +13,8 @@ end
 100.times do Comment.create(body: Faker::Hipster.sentence, user_id: rand(1..30), commentable_type: "Answer", commentable_id: Answer.find(rand(11..20)).id)
 end
 
-100.times do Vote.create(votable_type: "Question", votable_id: Question.find(rand(1..20)).id, voter_id: (rand(1..30)), vote_value: (rand(-1..1)))
+100.times do Vote.create(votable_type: "Question", votable_id: Question.find(rand(1..20)).id, voter_id: (rand(1..30)), vote_value: [1,-1].sample)
 end
 
-100.times do Vote.create(votable_type: "Answer", votable_id: Answer.find(rand(1..20)).id, voter_id: (rand(1..30)), vote_value: (rand(-1..1)))
+100.times do Vote.create(votable_type: "Answer", votable_id: Answer.find(rand(1..20)).id, voter_id: (rand(1..30)), vote_value: [1,-1].sample)
 end
