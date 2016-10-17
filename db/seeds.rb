@@ -40,3 +40,9 @@ User.create(name: "Stephanie", email: "stephanie@gmail.com", username: "stelane"
 Question.create(title: "Out of coffee", body: "Help! Out of coffee and distraught. Unable to achieve basic life skills.", asker_id: 5)
 
 Answer.create(body: "Maybe you should get some velcro shoes instead? 541b6b20a35afddcd1a5e85ea65e07a6.jpg", responder_id: 5, question_id: 2)
+
+User.create(name:"Adam", email:"adam@applesau.ce", username:"adamapplesauce", password:"apples")
+
+Question.create(title:"In the absence of reality", body:"I seem to have completely misplaced my sense of reality. Does anyone know where I can buy another?", asker_id:2)
+
+Answer.create(body: "If you look close enough you can see the tiny girraffes everywhere", responder_id: 2, question_id:4)
